@@ -214,7 +214,9 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
           (fmt-uopt   `(                             :underline ,opt-under))
           ;; FIXME: don’t hardcode the SRGB color names
           (fmt-curl-red    `(                        :underline (:color "#dc322f" :style wave)))
+	  (fmt-undr-red    `(                        :underline (:color "#dc322f")))
           (fmt-curl-yellow `(                        :underline (:color "#b58900" :style wave)))
+	  (fmt-undr-yellow `(                        :underline (:color "#b58900")))
           (fmt-curl-magenta `(                       :underline (:color "#d33682" :style wave)))
           (fmt-curl-cyan `(                          :underline (:color "#2aa198" :style wave)))
           (fmt-ital   `(              :slant ,italic))
@@ -722,8 +724,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (font-latex-warning-face (,@fg-red))
                 (font-latex-sectioning-5-face (,@fg-violet))
                 ;;flyspell
-                (flyspell-incorrect (,@fmt-curl-red)) ; SpellBad
-                (flyspell-duplicate (,@fmt-curl-yellow))
+                (flyspell-incorrect (,@fmt-undr-red)) ; SpellBad
+                (flyspell-duplicate (,@fmt-undr-yellow))
                 ;; rst-mode
                 (rst-level-1 (:inherit outline-1))
                 (rst-level-2 (:inherit outline-2))
