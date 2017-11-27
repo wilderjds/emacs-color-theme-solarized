@@ -781,6 +781,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (undo-tree-visualizer-active-branch-face (:inherit default))
                 (undo-tree-visualizer-unmodified-face (,@fg-cyan))
                 (undo-tree-visualizer-register-face (,@fg-yellow))
+		;;visible-mark
+		(visible-mark-active (,@fg-base03 ,@bg-yellow))
                 ;; haskell
                 (haskell-keyword-face (,@fg-cyan)))))))
 
