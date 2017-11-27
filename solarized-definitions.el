@@ -336,9 +336,9 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (font-lock-constant-face (,@fmt-none ,@fg-cyan)) ; Constant
                 (font-lock-function-name-face ; Identifier
                  (,@fmt-none ,@fg-blue))
-                (font-lock-keyword-face (,@fmt-none ,@fg-green)) ; Statement
+                (font-lock-keyword-face (,@fmt-none ,@fg-yellow)) ; Statement
                 (font-lock-string-face (,@fmt-none ,@fg-cyan)) ; Constant
-                (font-lock-type-face (,@fmt-none ,@fg-yellow)) ; Type
+                (font-lock-type-face (,@fmt-none ,@fg-green)) ; Type
                 (font-lock-variable-name-face ; Identifier
                  (,@fmt-none ,@fg-blue))
                 (font-lock-warning-face (,@fmt-bold ,@fg-red)) ; Error
