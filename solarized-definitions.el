@@ -218,6 +218,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
           (fmt-curl-yellow `(                        :underline (:color "#b58900" :style wave)))
 	  (fmt-undr-yellow `(                        :underline (:color "#b58900")))
           (fmt-curl-magenta `(                       :underline (:color "#d33682" :style wave)))
+	  (fmt-undr-magenta `(                       :underline (:color "#d33682" )))
           (fmt-curl-cyan `(                          :underline (:color "#2aa198" :style wave)))
           (fmt-ital   `(              :slant ,italic))
           ;; FIXME: not quite the same
@@ -236,8 +237,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (link (,@fmt-undr ,@fg-violet))    ; Underlined
                 (link-visited (,@fmt-undr ,@fg-magenta))
                 (match (,@fmt-revr ,@fg-yellow))   ; Search
-                (error (,@fmt-revr ,@fg-red))      ; ErrorMsg
-                (warning (,@fmt-bold ,@fg-red))    ; WarningMsg
+                (error (,@fmt-revr ,@fg-magenta))      ; ErrorMsg
+                (warning (,@fmt-bold ,@fg-magenta))    ; WarningMsg
                 (success (,@fg-blue))              ; MoreMsg
                 (escape-glyph-face (,@fg-red))
                 (fringe (,@fg-base01 ,@bg-base02))
@@ -257,7 +258,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (region (,@fg-base01 ,@bg-base03 ,@fmt-revbb)) ; Visual
                 (secondary-selection (,@bg-base02))
                 (shadow (,@fg-base01))
-                (trailing-whitespace (,@fmt-revr ,@fg-red))
+                (trailing-whitespace (,@fmt-revr ,@fg-magenta))
                 (vertical-border (,@fg-base0))
                 ;; comint
                 (comint-highlight-prompt (,@fg-blue))
@@ -316,7 +317,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (ido-subdir (,@fg-blue))
                 (ido-first-match (,@fmt-bold ,@fg-green))
                 ;; emacs-wiki
-                (emacs-wiki-bad-link-face (,@fmt-undr ,@fg-red))
+                (emacs-wiki-bad-link-face (,@fmt-undr ,@fg-magenta))
                 (emacs-wiki-link-face (,@fmt-undr ,@fg-blue))
                 (emacs-wiki-verbatim-face (,@fmt-undr ,@fg-base00))
                 ;; eshell
@@ -343,7 +344,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (font-lock-type-face (,@fmt-none ,@fg-green)) ; Type
                 (font-lock-variable-name-face ; Identifier
                  (,@fmt-none ,@fg-blue))
-                (font-lock-warning-face (,@fmt-bold ,@fg-red)) ; Error
+                (font-lock-warning-face (,@fmt-bold ,@fg-magenta)) ; Error
                 (font-lock-doc-face (,@fmt-ital ,@fg-base01)) ; Comment
                 (font-lock-doc-string-face ; Comment (XEmacs-only)
                  (,@fmt-ital ,@fg-base01))
@@ -352,7 +353,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                  (,@fmt-ital ,@fg-base01))
                 (font-lock-preprocessor-face (,@fmt-none ,@fg-orange)) ; PreProc
                 (font-lock-reference-face (,@fmt-none ,@fg-cyan))
-                (font-lock-negation-char-face (,@fmt-none ,@fg-red))
+                (font-lock-negation-char-face (,@fmt-none ,@fg-magenta))
                 (font-lock-other-type-face (,@fmt-ital ,@fg-blue))
                 (font-lock-regexp-grouping-construct (,@fmt-none ,@fg-orange))
                 (font-lock-special-keyword-face (,@fmt-none ,@fg-red)) ; Special
@@ -436,7 +437,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (outline-8 (,@fg-violet))
                 ;; show-paren - MatchParen
                 (show-paren-match (,@fmt-bold ,@fg-cyan ,@bg-base02))
-                (show-paren-mismatch (,@fmt-bold ,@fg-red ,@bg-base01))
+                (show-paren-mismatch (,@fmt-bold ,@fg-magenta ,@bg-base01))
                 ;; speedbar
                 ;; (speedbar-button-face (,@fmt-none ,@fg-base1))
                 (speedbar-button-face
@@ -476,8 +477,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (bm-fringe-face (,@bg-orange ,@fg-base03))
                 (bm-fringe-persistent-face (,@bg-blue ,@fg-base03))
                 ;; Flymake
-                (flymake-errline (,@fmt-bold ,@fg-red)) ; Error
-                (flymake-warnline (,@fmt-bold ,@fg-red))
+                (flymake-errline (,@fmt-bold ,@fg-magenta)) ; Error
+                (flymake-warnline (,@fmt-bold ,@fg-magenta))
                 ;; column-marker
                 (column-marker-1 (,@bg-base01))
                 (column-marker-2 (,@bg-cyan))
@@ -684,27 +685,27 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (powerline-inactive1 (,@fg-base02 ,@bg-base1 :inherit mode-line-inactive))
                 (powerline-inactive2 (,@fg-base01 :inherit mode-line-inactive))
                 ;; slime
-                (slime-error-face (,@fmt-revr ,@fg-red)) ; ErrorMsg
+                (slime-error-face (,@fmt-revr ,@fg-magenta)) ; ErrorMsg
                 (slime-note-face (,@fg-yellow))
                 (slime-repl-inputted-output-face (,@fg-red))
                 (slime-repl-output-mouseover-face (:box (:color base3)))
                 (slime-style-warning-face (,@fmt-bold ,@fg-orange))
-                (slime-warning-face (,@fmt-bold ,@fg-red)) ; WarningMsg
+                (slime-warning-face (,@fmt-bold ,@fg-magenta)) ; WarningMsg
                 ;; smartparens
                 (sp-pair-overlay-face (,@bg-base02))
                 (sp-wrap-overlay-face (,@bg-base02))
                 (sp-wrap-tag-overlay-face (,@bg-base02))
-                (sp-show-pair-match-face (,@fg-magenta ,@bg-back))
-                (sp-show-pair-mismatch-face (,@bg-red ,@fg-base02))
+                (sp-show-pair-match-face (,@fg-green ,@bg-back))
+                (sp-show-pair-mismatch-face (,@bg-magenta ,@fg-base02))
                 ;; whitespace
-                (whitespace-empty (,@fg-red))
+                (whitespace-empty (,@fg-magenta))
                 (whitespace-hspace (,@fg-orange))
                 (whitespace-indentation (,@fg-base02))
                 (whitespace-space (,@fg-base02))
                 (whitespace-space-after-tab (,@fg-cyan))
-                (whitespace-space-before-tab (,@fmt-bold ,@fg-red))
+                (whitespace-space-before-tab (,@fmt-bold ,@fg-magenta))
                 (whitespace-tab (,@fg-base02))
-                (whitespace-trailing (,@fmt-bold ,@fg-red ,@bg-base02))
+                (whitespace-trailing (,@fmt-bold ,@fg-magenta ,@bg-base02))
                 (whitespace-highlight-face (,@fg-red ,@bg-blue))
                 (whitespace-line (,@fg-magenta))
                 (whitespace-newline (:inherit shadow :slant normal))
@@ -724,7 +725,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (font-latex-warning-face (,@fg-red))
                 (font-latex-sectioning-5-face (,@fg-violet))
                 ;;flyspell
-                (flyspell-incorrect (,@fmt-undr-red)) ; SpellBad
+                (flyspell-incorrect (,@fmt-undr-magenta)) ; SpellBad
                 (flyspell-duplicate (,@fmt-undr-yellow))
                 ;; rst-mode
                 (rst-level-1 (:inherit outline-1))
