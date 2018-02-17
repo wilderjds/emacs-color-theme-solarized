@@ -743,6 +743,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (term-color-magenta (,@fg-magenta ,@bg-magenta))
                 (term-color-cyan (,@fg-cyan ,@bg-cyan))
                 (term-color-white (,@fg-base00 ,@bg-base00))
+		;; tooltip
+		(tooltip (,@bg-base2))
                 ;; company
                 (company-tooltip (,@fg-base00 ,@bg-base02))
                 (company-tooltip-selection (,@fg-green ,@bg-base02))
