@@ -592,7 +592,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (helm-buffer-process (,@fg-magenta))
                 (helm-buffer-saved-out (,@fmt-revr ,@fg-red ,@bg-back))
                 (helm-buffer-size (,@fg-base01))
-                (helm-candidate-number (,@fmt-bold ,@bg-base02 ,@fg-base1))
+                (helm-candidate-number ( ,@fg-yellow))
                 (helm-emms-playlist (,@fmt-none ,@fg-base01))
                 (helm-etags+-highlight-face (:inherit highlight))
                 (helm-ff-directory (,@bg-back ,@fg-blue))
