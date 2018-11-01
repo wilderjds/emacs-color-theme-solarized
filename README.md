@@ -1,14 +1,19 @@
-[![Stories in Ready](https://badge.waffle.io/sellout/emacs-color-theme-solarized.png?label=ready&title=Ready)](https://waffle.io/sellout/emacs-color-theme-solarized)
-Solarized Colorscheme for Emacs
+[![Stories in Ready](https://badge.waffle.io/sellout/emacs-color-theme-lunarized.png?label=ready&title=Ready)](https://waffle.io/sellout/emacs-color-theme-lunarized)
+Lunarized Colorscheme for Emacs
 ===============================
 
-Stolen from Ethan Schoonover <es@ethanschoonover.com> by Greg Pfeil <greg@technomadic.org>
+Stolen from Ethan Schoonover <es@ethanschoonover.com> by Greg Pfeil
+<greg@technomadic.org>. Desaturated [lunarized] version by Jacopo De
+Simoi <wilderkde@gmail.com> All credit for the emacs adaptation go to
+Greg Pfeil
+
+
 
 Visit the [Solarized homepage]
 ------------------------------
 
-See the [Solarized homepage] for screenshots, 
-details and colorscheme versions for Vim, Mutt, popular terminal emulators and 
+See the [Solarized homepage] for screenshots,
+details and colorscheme versions for Vim, Mutt, popular terminal emulators and
 other applications.
 
 Screenshots
@@ -19,14 +24,15 @@ Screenshots
 Downloads
 ---------
 
-If you have come across this colorscheme via the [Emacs-only repository] on 
+If you have come across this colorscheme via the [Emacs-only repository] on
 github, see the link above to the Solarized homepage or visit the main [Solarized repository].
 
 The [Emacs-only repository] is kept in sync with the main [Solarized repository]. Issues, bug reports, changelogs that are not specific to the Emacs implementation should be submitted to the main [Solarized repository].
 
 [Solarized homepage]:    http://ethanschoonover.com/solarized
 [Solarized repository]:  https://github.com/altercation/solarized
-[Emacs-only repository]:  https://github.com/sellout/emacs-color-theme-solarized
+[Original Emacs-only repository]:  https://github.com/sellout/emacs-color-theme-solarized
+[Emacs-only repository]:  https://github.com/wilderjds/emacs-color-theme-lunarized
 [color-theme]: http://www.nongnu.org/color-theme
 
 Installation & Usage
@@ -34,20 +40,27 @@ Installation & Usage
 
 ### Emacs 24
 
-1. Add the `emacs-color-theme-solarized` directory to your Emacs `custom-theme-load-path`.
-2. Add `(load-theme 'solarized t)` to your Emacs init file.
+1. Add the `emacs-color-theme-lunarized` directory to your Emacs `custom-theme-load-path`.
+2. Add `(load-theme 'lunarized t)` to your Emacs init file.
 3. Reload the init file, or restart Emacs.
 
 ### [color-theme] \(pre-Emacs 24\)
 
 1. Download and install [color-theme].
-2. Add the `emacs-color-theme-solarized` directory to your Emacs `load-path`.
-3. Add `(require 'color-theme-solarized)` and `(color-theme-solarized)` to your Emacs init file (usually `~/.emacs`).
+2. Add the `emacs-color-theme-lunarized` directory to your Emacs `load-path`.
+3. Add `(require 'color-theme-lunarized)` and `(color-theme-lunarized)` to your Emacs init file (usually `~/.emacs`).
 3. Reload the init file, or restart Emacs.
 
 ### all versions
 
-To switch between the light and dark variations of Solarized, set the frame’s `background-mode`. This can be accomplished globally using `M-x customize-variable frame-background-mode` or on a per-frame basis with `(set-frame-parameter nil 'background-mode 'light)` (or `'dark`).  If you're in a terminal, you must also set the terminal parameter with `(set-terminal-parameter nil 'background-mode 'light)` (or `'dark`). Remember to call `enable-theme` after changing the background mode to update the state of the theme.
+To switch between the light and dark variations of Lunarized, set the
+frame’s `background-mode`. This can be accomplished globally using
+`M-x customize-variable frame-background-mode` or on a per-frame basis
+with `(set-frame-parameter nil 'background-mode 'light)` (or `'dark`).
+If you're in a terminal, you must also set the terminal parameter with
+`(set-terminal-parameter nil 'background-mode 'light)` (or
+`'dark`). Remember to call `enable-theme` after changing the
+background mode to update the state of the theme.
 
 This allows you to have a mix of light and dark frames. I tend to use light frames in the GUI and dark frames in my terminal, so I use the following code:
 
@@ -57,98 +70,98 @@ This allows you to have a mix of light and dark frames. I tend to use light fram
             (let ((mode (if (display-graphic-p frame) 'light 'dark)))
               (set-frame-parameter frame 'background-mode mode)
               (set-terminal-parameter frame 'background-mode mode))
-            (enable-theme 'solarized)))
+            (enable-theme 'lunarized)))
 ```
 
 ### IMPORTANT NOTE FOR TERMINAL USERS:
 
-If you are going to use Solarized in Terminal mode (i.e. not in a GUI version
+If you are going to use Lunarized in Terminal mode (i.e. not in a GUI version
 like Cocoa or X11 Emacs), **please please please** consider setting your
-terminal emulator's colorscheme to use the Solarized palette. The [Solarized
+terminal emulator's colorscheme to use the Lunarized palette. The [Lunarized
 repository] includes palettes for some popular terminal emulator as well as
-Xdefaults; or you can download them from the official [Solarized homepage].
+Xdefaults; or you can download them from the official [Lunarized homepage].
 If you use this emacs color theme *without* having changed your emulator's
-palette, you will need to configure Solarized to degrade its colorscheme to
+palette, you will need to configure Lunarized to degrade its colorscheme to
 a set compatible with the terminal's default limited 256 color palette
 (whereas by using the terminal's 16 ANSI color values, you would
-see the correct, specific values for the Solarized palette).
+see the correct, specific values for the Lunarized palette).
 
-Again, I recommend just changing your terminal colors to Solarized values 
+Again, I recommend just changing your terminal colors to Lunarized values
 either manually or via one of the many terminal schemes available for import.
 
 Advanced Configuration
 ----------------------
 
-Solarized will work out of the box with just the instructions specified above
+Lunarized will work out of the box with just the instructions specified above
 but does include several variables that can be customized.
 
     variable name            default   optional
     --------------------------------------------
-    solarized-termcolors =   16    |   256
-    solarized-degrade    =   nil   |   t
-    solarized-bold       =   t     |   nil
-    solarized-underline  =   t     |   nil
-    solarized-italic     =   t     |   nil
-    solarized-contrast   =   normal|   high, low
-    solarized-visibility =   normal|   high, low
-    solarized-broken-srgb=   nil   |   t (see details for Mac behavior)
+    lunarized-termcolors =   16    |   256
+    lunarized-degrade    =   nil   |   t
+    lunarized-bold       =   t     |   nil
+    lunarized-underline  =   t     |   nil
+    lunarized-italic     =   t     |   nil
+    lunarized-contrast   =   normal|   high, low
+    lunarized-visibility =   normal|   high, low
+    lunarized-broken-srgb=   nil   |   t (see details for Mac behavior)
     --------------------------------------------
 
 ### Option Details
 
-*   solarized-termcolors
+*   lunarized-termcolors
 
     Some 256-color terminals also allow you to set and use the standard 16
     colors in addition to the fixed 256-color palette. This option only
     applies when your terminal is in 256-color mode. If set to 16 (the
-    default) it will try to use the exact Solarized colors (assuming that
-    you've set these colors to the correct Solarized values either manually or
+    default) it will try to use the exact Lunarized colors (assuming that
+    you've set these colors to the correct Lunarized values either manually or
     by importing one of the many colorscheme available for popular
-    terminal emulators). If it’s set to 256, then Solarized will use a
-    degraded version of the Solarized palette by displaying the closest colors
+    terminal emulators). If it’s set to 256, then Lunarized will use a
+    degraded version of the Lunarized palette by displaying the closest colors
     in the terminal's default 256 colors as shown in [Xterm's color
     chart](http://en.wikipedia.org/wiki/File:Xterm_color_chart.png).
 
-*   solarized-degrade
+*   lunarized-degrade
 
-    For test purposes only; in GUI mode, this forces Solarized to use the 256
+    For test purposes only; in GUI mode, this forces Lunarized to use the 256
     degraded color mode to test the approximate color values for accuracy.
 
-*   solarized-bold | solarized-underline | solarized-italic
+*   lunarized-bold | lunarized-underline | lunarized-italic
 
-    If you wish to stop Solarized from displaying bold, underlined or 
+    If you wish to stop Lunarized from displaying bold, underlined or
     italicized typefaces, simply set the appropriate variable to `nil`.
 
-*   solarized-contrast
+*   lunarized-contrast
 
-    Stick with normal! It's been carefully tested. Setting this option to high 
-    or low does use the same Solarized palette but simply shifts some values
+    Stick with normal! It's been carefully tested. Setting this option to high
+    or low does use the same Lunarized palette but simply shifts some values
     up or down in order to expand or compress the tonal range displayed.
 
-*   solarized-visibility
+*   lunarized-visibility
 
     Special characters such as trailing whitespace, tabs, newlines, when
-    displayed using `:set list` can be set to one of three levels depending on 
+    displayed using `:set list` can be set to one of three levels depending on
     your needs. Default value is `normal` with `high` and `low` options.
-    
-*   solarized-broken-srgb
+
+*   lunarized-broken-srgb
 
     Emacs [bug #8402](http://debbugs.gnu.org/cgi/bugreport.cgi?bug=8402)
     results in incorrect color handling on Macs. If you are using Emacs on a
     Mac, we try to determine this value automatically. If this is `t` (the
-    default on Macs), Solarized works around it with alternative colors.
+    default on Macs), Lunarized works around it with alternative colors.
     However, these colors are not totally portable, so you may be able to edit
-    the "Gen RGB" column in `solarized-definitions.el` to improve them further.
+    the "Gen RGB" column in `lunarized-definitions.el` to improve them further.
 
 Code Notes
 ----------
 
-I have attempted to modularize the creation of Emacs colorschemes in this script and, while it could be refactored further, it should be a good foundation for the creation of any color scheme. By simply changing the values in the `solarized-colors` table in `solarized-definitions.el` and testing in a GUI Emacs, you can rapidly prototype new colorschemes without diving into the weeds of line-item editing each syntax highlight declaration.
+I have attempted to modularize the creation of Emacs colorschemes in this script and, while it could be refactored further, it should be a good foundation for the creation of any color scheme. By simply changing the values in the `lunarized-colors` table in `lunarized-definitions.el` and testing in a GUI Emacs, you can rapidly prototype new colorschemes without diving into the weeds of line-item editing each syntax highlight declaration.
 
 The Values
 ----------
 
-L\*a\*b values are canonical (White D65, Reference D50), other values are 
+L\*a\*b values are canonical (White D65, Reference D50), other values are
 matched in sRGB space.
 
     SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
@@ -169,7 +182,7 @@ matched in sRGB space.
     blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
     cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
     green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
-    
+
 ### Bug Reporting
 
 Here are some things to keep in mind when submitting a bug report:

@@ -1,6 +1,6 @@
-(require 'solarized-definitions
-         (locate-file "solarized-definitions.el" custom-theme-load-path
+(require 'lunarized-definitions
+         (locate-file "lunarized-definitions.el" custom-theme-load-path
                       '("c" "")))
 
-(create-solarized-theme solarized
-                        solarized-description (solarized-color-definitions))
+(create-lunarized-theme lunarized
+                        lunarized-description (lunarized-color-definitions))

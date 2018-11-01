@@ -4,70 +4,70 @@
     (defalias 'cl-case 'case))
   )
 
-(defconst solarized-description
+(defconst lunarized-description
   "Color theme by Ethan Schoonover, created 2011-03-24.
-Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized.")
+Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/lunarized.")
 
-(defcustom solarized-termcolors 16
-  "This is set to 16 by default, meaning that Solarized will attempt to use the
+(defcustom lunarized-termcolors 16
+  "This is set to 16 by default, meaning that Lunarized will attempt to use the
 standard 16 colors of your terminal emulator. You will need to set those colors
-to the correct Solarized values either manually or by importing one of the many
+to the correct Lunarized values either manually or by importing one of the many
 colorscheme available for popular terminal emulators and Xdefaults."
   :type 'integer
   :options '(16 256)
-  :group 'solarized)
+  :group 'lunarized)
 
-(defcustom solarized-degrade nil
-  "For test purposes only; when in GUI mode, forces Solarized to use the 256
+(defcustom lunarized-degrade nil
+  "For test purposes only; when in GUI mode, forces Lunarized to use the 256
 degraded color mode to test the approximate color values for accuracy."
   :type 'boolean
-  :group 'solarized)
+  :group 'lunarized)
 
-(defcustom solarized-diff-mode 'normal
+(defcustom lunarized-diff-mode 'normal
   "Sets the level of highlighting to use in diff-like modes."
   :type 'symbol
   :options '(high normal low)
-  :group 'solarized)
+  :group 'lunarized)
 
-(defcustom solarized-bold t
-  "Stops Solarized from displaying bold when nil."
+(defcustom lunarized-bold t
+  "Stops Lunarized from displaying bold when nil."
   :type 'boolean
-  :group 'solarized)
+  :group 'lunarized)
 
-(defcustom solarized-underline t
-  "Stops Solarized from displaying underlines when nil."
+(defcustom lunarized-underline t
+  "Stops Lunarized from displaying underlines when nil."
   :type 'boolean
-  :group 'solarized)
+  :group 'lunarized)
 
-(defcustom solarized-italic t
-  "Stops Solarized from displaying italics when nil."
+(defcustom lunarized-italic t
+  "Stops Lunarized from displaying italics when nil."
   :type 'boolean
-  :group 'solarized)
+  :group 'lunarized)
 
-(defcustom solarized-contrast 'normal
+(defcustom lunarized-contrast 'normal
   "Stick with normal! It's been carefully tested. Setting this option to high or
-low does use the same Solarized palette but simply shifts some values up or
+low does use the same Lunarized palette but simply shifts some values up or
 down in order to expand or compress the tonal range displayed."
   :type 'symbol
   :options '(high normal low)
-  :group 'solarized)
+  :group 'lunarized)
 
-(defcustom solarized-broken-srgb
+(defcustom lunarized-broken-srgb
   (if (and (eq system-type 'darwin) (eq window-system 'ns))
       (not (and (boundp 'ns-use-srgb-colorspace)
                 ns-use-srgb-colorspace))
     nil)
   "Emacs bug #8402 results in incorrect color handling on Macs. If this is t
-\(the default on Macs), Solarized works around it with alternative colors.
+\(the default on Macs), Lunarized works around it with alternative colors.
 However, these colors are not totally portable, so you may be able to edit
-the \"Gen RGB\" column in solarized-definitions.el to improve them further."
+the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
   :type 'boolean
-  :group 'solarized)
+  :group 'lunarized)
 
 ;; FIXME: The Generic RGB colors will actually vary from device to device, but
 ;;        hopefully these are closer to the intended colors than the sRGB values
 ;;        that Emacs seems to dislike
-(defvar solarized-colors           ; ANSI(Solarized terminal)
+(defvar lunarized-colors           ; ANSI(Lunarized terminal)
   ;; name     sRGB      Gen RGB   256       16              8
   '((base03  "#262626"   "#1c1c1c" "#1c1c1c" "brightblack"   "black")
     (base02  "#303030"   "#242424" "#262626" "black"         "black")
@@ -85,13 +85,13 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
     (blue    "#268bd2" "#2075c7" "#0087ff" "blue"          "blue")
     (cyan    "#2aa198" "#259185" "#00afaf" "cyan"          "cyan")
     (green   "#859900" "#728a05" "#5f8700" "green"         "green"))
-  "This is a table of all the colors used by the Solarized color theme. Each
+  "This is a table of all the colors used by the Lunarized color theme. Each
    column is a different set, one of which will be chosen based on term
    capabilities, etc.")
 
-(defun solarized-face-for-index (facespec index &optional light)
+(defun lunarized-face-for-index (facespec index &optional light)
   "Creates a face from facespec where the colors use the names from
-  `solarized-colors`."
+  `lunarized-colors`."
   (let ((new-fontspec (copy-sequence facespec)))
     (dolist (property '(:foreground :background :color))
       (let ((color-name (plist-get new-fontspec property)))
@@ -121,53 +121,53 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                     (otherwise color-name))))
           (plist-put new-fontspec
                      property
-                     (nth index (assoc color-name solarized-colors))))))
+                     (nth index (assoc color-name lunarized-colors))))))
     (when (plist-get new-fontspec :box)
       (plist-put new-fontspec
                  :box
-                 (solarized-face-for-index (plist-get new-fontspec :box) index
+                 (lunarized-face-for-index (plist-get new-fontspec :box) index
                                            light)))
     new-fontspec))
 
 (defun create-face-spec (name facespec)
   `(,name ((((background dark) (type graphic))
-            ,(solarized-face-for-index facespec
-                                       (cond (solarized-degrade     3)
-                                             (solarized-broken-srgb 2)
+            ,(lunarized-face-for-index facespec
+                                       (cond (lunarized-degrade     3)
+                                             (lunarized-broken-srgb 2)
                                              (t                     1))))
            (((background dark) (type tty) (min-colors 256))
-            ,(solarized-face-for-index facespec
-                                       (if (= solarized-termcolors 16) 4 3)))
+            ,(lunarized-face-for-index facespec
+                                       (if (= lunarized-termcolors 16) 4 3)))
            (((background dark) (type tty) (min-colors  16))
-            ,(solarized-face-for-index facespec 4))
+            ,(lunarized-face-for-index facespec 4))
            (((background dark) (type tty) (min-colors   8))
-            ,(solarized-face-for-index facespec 5))
+            ,(lunarized-face-for-index facespec 5))
            (((background light) (type graphic))
-            ,(solarized-face-for-index facespec
-                                       (cond (solarized-degrade     3)
-                                             (solarized-broken-srgb 2)
+            ,(lunarized-face-for-index facespec
+                                       (cond (lunarized-degrade     3)
+                                             (lunarized-broken-srgb 2)
                                              (t                     1))
                                        t))
            (((background light) (type tty) (min-colors 256))
-            ,(solarized-face-for-index facespec
-                                       (if (= solarized-termcolors 16) 4 3)
+            ,(lunarized-face-for-index facespec
+                                       (if (= lunarized-termcolors 16) 4 3)
                                        t))
            (((background light) (type tty) (min-colors  16))
-            ,(solarized-face-for-index facespec 4 t))
+            ,(lunarized-face-for-index facespec 4 t))
            (((background light) (type tty) (min-colors   8))
-            ,(solarized-face-for-index facespec 5 t)))))
+            ,(lunarized-face-for-index facespec 5 t)))))
 
-(defun solarized-color-definitions ()
-  (let ((bold        (if solarized-bold 'bold        'unspecified))
-        (bright-bold (if solarized-bold 'unspecified 'bold))
-        (underline   (if solarized-underline t 'unspecified))
+(defun lunarized-color-definitions ()
+  (let ((bold        (if lunarized-bold 'bold        'unspecified))
+        (bright-bold (if lunarized-bold 'unspecified 'bold))
+        (underline   (if lunarized-underline t 'unspecified))
         (opt-under   'unspecified)
-        (italic      (if solarized-italic 'italic 'unspecified)))
-    (cond ((eq 'high solarized-contrast)
+        (italic      (if lunarized-italic 'italic 'unspecified)))
+    (cond ((eq 'high lunarized-contrast)
            (let ((orig-base3 base3))
              (rotatef base01 base00 base0 base1 base2 base3)
              (setf base3 orig-base3)))
-          ((eq 'low solarized-contrast)
+          ((eq 'low lunarized-contrast)
            (setf back      base02
                  opt-under t)))
     (let ((bg-back   '(:background back))
@@ -285,7 +285,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (custom-state (,@fg-green))
                 (custom-variable-tag (,@fg-base1))
                 ;; diff - DiffAdd, DiffChange, DiffDelete, and DiffText
-                ,@(cl-case solarized-diff-mode
+                ,@(cl-case lunarized-diff-mode
                     (high
                      `((diff-added (,@fmt-revr ,@fg-green))
                        (diff-changed (,@fmt-revr ,@fg-yellow))
@@ -799,11 +799,11 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(defmacro create-solarized-theme (name description color-definitions)
+(defmacro create-lunarized-theme (name description color-definitions)
   `(progn
      (deftheme ,name ,description)
      (apply 'custom-theme-set-faces
             ',name ,color-definitions)
      (provide-theme ',name)))
 
-(provide 'solarized-definitions)
+(provide 'lunarized-definitions)
