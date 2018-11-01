@@ -412,6 +412,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (org-code (,@fg-base01))
                 (org-document-title (,@fmt-bold ,@fg-cyan))
                 (org-document-info-keyword (,@fg-base01))
+                (org-document-info (,@fg-green))
                 (org-block (,@fg-base01))
                 (org-verbatim (,@fmt-undr ,@fg-base01))
                 (org-clock-overlay (,@fmt-revr ,@bg-cyan ,@fg-base03))
