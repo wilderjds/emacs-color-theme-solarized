@@ -3,7 +3,7 @@ Lunarized Colorscheme for Emacs
 ===============================
 
 Stolen from Ethan Schoonover <es@ethanschoonover.com> by Greg Pfeil
-<greg@technomadic.org>. Desaturated [lunarized] version by Jacopo De
+<greg@technomadic.org>. Desaturated (lunarized) version by Jacopo De
 Simoi <wilderkde@gmail.com> All credit for the emacs adaptation go to
 Greg Pfeil
 
@@ -12,7 +12,7 @@ Greg Pfeil
 Visit the [Solarized homepage]
 ------------------------------
 
-See the [Solarized homepage] for screenshots,
+See the [Solarized homepage] for screenshots of the original colorscheme,
 details and colorscheme versions for Vim, Mutt, popular terminal emulators and
 other applications.
 
@@ -24,10 +24,14 @@ Screenshots
 Downloads
 ---------
 
-If you have come across this colorscheme via the [Emacs-only repository] on
-github, see the link above to the Solarized homepage or visit the main [Solarized repository].
+If you have come across this colorscheme via the [Emacs-only
+repository] on github, see the link above to the Solarized homepage or
+visit the main [Solarized repository].
 
-The [Emacs-only repository] is kept in sync with the main [Solarized repository]. Issues, bug reports, changelogs that are not specific to the Emacs implementation should be submitted to the main [Solarized repository].
+The [Emacs-only repository] is kept in sync with the main [Solarized
+repository]. Issues, bug reports, changelogs that are not specific to
+the Emacs implementation should be submitted to the main [Solarized
+repository].
 
 [Solarized homepage]:    http://ethanschoonover.com/solarized
 [Solarized repository]:  https://github.com/altercation/solarized

@@ -1,5 +1,7 @@
-;;; Author: Ethan Schoonover, Lunarized; Greg Pfeil, Emacs adaptation
-;;; URL: http://ethanschoonover.com/lunarized
+;;; Author: Ethan Schoonover, Solarized;
+;;; Author: Greg Pfeil, Emacs adaptation;
+;;; Author: Jacopo De Simoi desaturated fork.
+;;; URL: http://ethanschoonover.com/solarized
 
 ;;; This file is not (YET) part of GNU Emacs.
 
@@ -25,7 +27,7 @@
 ;;;###autoload
 (defun color-theme-lunarized ()
   "Color theme by Ethan Schoonover, created 2011-03-24.
-Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/lunarized."
+Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
   (interactive)
   (color-theme-install
    `(color-theme-lunarized () () ,@(lunarized-color-definitions))))
@@ -39,13 +41,13 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/lunarized."
 ;;;###autoload
 (defun color-theme-lunarized-dark ()
   "Color theme by Ethan Schoonover, created 2011-03-24.
-Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/lunarized."
+Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
   (declare (obsolete color-theme-lunarized "2013-05-01"))
   (color-theme-lunarized))
 ;;;###autoload
 (defun color-theme-lunarized-light ()
   "Color theme by Ethan Schoonover, created 2011-03-24.
-Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/lunarized."
+Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
   (declare (obsolete color-theme-lunarized "2013-05-01"))
   (color-theme-lunarized))
 
