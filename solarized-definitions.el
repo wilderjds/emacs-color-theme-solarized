@@ -770,6 +770,10 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 ;; magit
                 (magit-log-sha1 (,@fg-red))
                 (magit-branch (,@fg-yellow))
+                (magit-branch-local (,@fg-cyan))
+                (magit-branch-remote (,@fg-green))
+                (magit-section-heading (,@fg-yellow))
+                (magit-section-highlight (,@bg-base02))
                 (magit-tag (,@fg-green))
                 (magit-log-author (,@fg-cyan))
                 (magit-log-head-label-remote (,@fg-green))
