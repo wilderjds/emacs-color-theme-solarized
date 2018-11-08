@@ -6,7 +6,8 @@
 
 (defconst lunarized-description
   "Color theme by Ethan Schoonover, created 2011-03-24.
-Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/lunarized.")
+http://ethanschoonover.com/lunarized
+Ported to Emacs by Greg Pfeil, Desaturated base by Jacopo De Simoi")
 
 (defcustom lunarized-termcolors 16
   "This is set to 16 by default, meaning that Lunarized will attempt to use the
