@@ -438,8 +438,8 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (outline-7 (,@fg-orange))
                 (outline-8 (,@fg-violet))
                 ;; show-paren - MatchParen
-                (show-paren-match (,@fmt-bold ,@fg-cyan ,@bg-base02))
-                (show-paren-mismatch (,@fmt-bold ,@fg-magenta ,@bg-base01))
+                (show-paren-match ( ,@fmt-revr ,@fg-green ))
+                (show-paren-mismatch ( ,@fmt-revr ,@fg-magenta))
                 ;; speedbar
                 ;; (speedbar-button-face (,@fmt-none ,@fg-base1))
                 (speedbar-button-face
