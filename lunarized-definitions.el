@@ -232,15 +232,15 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
         '(setf ansi-color-names-vector [,base02 ,red ,green ,yellow ,blue ,magenta ,cyan ,base00]))
       (mapcar (lambda (face) (apply 'create-face-spec face))
               `(;; basic
-                (default (,@fg-base0 ,@bg-back))   ; Normal
-                (cursor (,@fg-base03 ,@bg-base0))  ; Cursor
+                (default (,@fg-base0 ,@bg-back))  ; Normal
+                (cursor (,@fg-base03 ,@bg-base0)) ; Cursor
                 (shadow (,@fg-base01))
-                (link (,@fmt-undr ,@fg-violet))    ; Underlined
+                (link (,@fmt-undr ,@fg-violet)) ; Underlined
                 (link-visited (,@fmt-undr ,@fg-magenta))
-                (match (,@fmt-revr ,@fg-yellow))   ; Search
-                (error (,@fmt-revr ,@fg-magenta))      ; ErrorMsg
-                (warning (,@fmt-bold ,@fg-magenta))    ; WarningMsg
-                (success (,@fg-blue))              ; MoreMsg
+                (match (,@fmt-revr ,@fg-yellow))    ; Search
+                (error (,@fmt-revr ,@fg-magenta))   ; ErrorMsg
+                (warning (,@fmt-bold ,@fg-magenta)) ; WarningMsg
+                (success (,@fg-blue))               ; MoreMsg
                 (escape-glyph-face (,@fg-red))
                 (fringe (,@fg-base01 ,@bg-base02))
                 (linum (,@fg-base01 ,@bg-base03))
@@ -249,12 +249,12 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (hl-line (:underline ,opt-under ,@bg-base02)) ; CursorLine
                 (isearch (,@fmt-stnd ,@fg-orange ,@bg-back)) ; IncSearch
                 (isearch-fail (,@fmt-undr-magenta)) ; ErrorMsg
-                (lazy-highlight (:inherit match)) ; Search
+                (lazy-highlight (:inherit match))   ; Search
                 (menu (,@fg-base0 ,@bg-base02))
                 (minibuffer-prompt (,@fmt-bold ,@fg-cyan)) ; Question
-                (mode-line ; StatusLine
+                (mode-line              ; StatusLine
                  (,@fg-base01 ,@bg-base3 :box nil))
-                (mode-line-inactive    ; StatusLineNC
+                (mode-line-inactive     ; StatusLineNC
                  (,@fg-base01 ,@bg-base2 :box nil))
                 (region (,@fg-base01 ,@bg-base03 ,@fmt-revbb)) ; Visual
                 (secondary-selection (,@bg-base02))
@@ -338,13 +338,11 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (font-lock-builtin-face (,@fmt-none ,@fg-green)) ; Statement
                 (font-lock-comment-face (,@fmt-ital ,@fg-base01)) ; Comment
                 (font-lock-constant-face (,@fmt-none ,@fg-cyan)) ; Constant
-                (font-lock-function-name-face ; Identifier
-                 (,@fmt-none ,@fg-blue))
-                (font-lock-keyword-face (,@fmt-none ,@fg-yellow)) ; Statement
+                (font-lock-function-name-face (,@fmt-none ,@fg-blue)) ; Identifier
+                (font-lock-keyword-face (,@fmt-none ,@fg-orange)) ; Statement
                 (font-lock-string-face (,@fmt-none ,@fg-cyan)) ; Constant
-                (font-lock-type-face (,@fmt-none ,@fg-green)) ; Type
-                (font-lock-variable-name-face ; Identifier
-                 (,@fmt-none ,@fg-blue))
+                (font-lock-type-face (,@fmt-none ,@fg-green))  ; Type
+                (font-lock-variable-name-face (,@fmt-none ,@fg-blue)) ; Identifier
                 (font-lock-warning-face (,@fmt-bold ,@fg-magenta)) ; Error
                 (font-lock-doc-face (,@fmt-ital ,@fg-base01)) ; Comment
                 (font-lock-doc-string-face ; Comment (XEmacs-only)
@@ -577,7 +575,7 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (gnus-summary-normal-undownloaded (,@fmt-none ,@fg-base2))
                 (gnus-summary-normal-unread ; unread messages
                  (,@fmt-none ,@fg-blue))
-                (gnus-summary-selected ; indicator
+                (gnus-summary-selected  ; indicator
                  (,@fmt-none ,@fg-base03 ,@bg-yellow))
                 ;;helm
                 (helm-apt-deinstalled (,@fg-base01))
@@ -745,8 +743,8 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (term-color-magenta (,@fg-magenta ,@bg-magenta))
                 (term-color-cyan (,@fg-cyan ,@bg-cyan))
                 (term-color-white (,@fg-base00 ,@bg-base00))
-		;; tooltip
-		(tooltip (,@bg-base2))
+		        ;; tooltip
+		        (tooltip (,@bg-base2))
                 ;; company
                 (company-tooltip (,@fg-base00 ,@bg-base02))
                 (company-tooltip-selection (,@fg-green ,@bg-base02))
@@ -790,8 +788,8 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (undo-tree-visualizer-active-branch-face (:inherit default))
                 (undo-tree-visualizer-unmodified-face (,@fg-cyan))
                 (undo-tree-visualizer-register-face (,@fg-yellow))
-		;;visible-mark
-		(visible-mark-active (,@fg-base03 ,@bg-yellow))
+		        ;;visible-mark
+		        (visible-mark-active (,@fg-base03 ,@bg-yellow))
                 ;; haskell
                 (haskell-keyword-face (,@fg-cyan)))))))
 
