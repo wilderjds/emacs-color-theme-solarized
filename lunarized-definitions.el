@@ -214,7 +214,7 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
           (fmt-undi   `(              :slant ,italic :underline ,underline))
           (fmt-uopt   `(                             :underline ,opt-under))
           ;; FIXME: don’t hardcode the SRGB color names
-          (fmt-curl-red    `(                        :underline (:color "#dc322f" :style wave)))
+          (fmt-curl-red    `(                        :underline (:color red :style wave)))
 	      (fmt-undr-red    `(                        :underline (:color "#dc322f")))
           (fmt-curl-yellow `(                        :underline (:color "#b58900" :style wave)))
 	      (fmt-undr-yellow `(                        :underline (:color "#b58900")))
