@@ -350,7 +350,7 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (font-lock-color-constant-face (,@fmt-none ,@fg-green))
                 (font-lock-comment-delimiter-face ; Comment
                  (,@fmt-ital ,@fg-base01))
-                (font-lock-preprocessor-face (,@fmt-none ,@fg-orange)) ; PreProc
+                (font-lock-preprocessor-face (,@fmt-none ,@fg-yellow)) ; PreProc
                 (font-lock-reference-face (,@fmt-none ,@fg-cyan))
                 (font-lock-negation-char-face (,@fmt-none ,@fg-magenta))
                 (font-lock-other-type-face (,@fmt-ital ,@fg-blue))
@@ -359,9 +359,10 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (font-lock-exit-face (,@fmt-none ,@fg-red))
                 (font-lock-other-emphasized-face (,@fmt-bldi ,@fg-violet))
                 (font-lock-regexp-grouping-backslash (,@fmt-none ,@fg-yellow))
-		;; LaTeX
-		(font-latex-math-face (,@fmt-none ,@fg-violet)) ; Type
-		(font-latex-sedate-face (,@fmt-none ,@fg-base1)) ; Type
+		        ;; LaTeX
+		        (font-latex-math-face (,@fmt-none ,@fg-base1)) ; Type
+		        (font-latex-sedate-face (,@fmt-none ,@fg-yellow)) ; Type
+                (font-latex-italic-face (,@fmt-none ,@fg-green))
                 ;; info
                 (info-xref (:inherit link))
                 (info-xref-visited (:inherit link-visited))
