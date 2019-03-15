@@ -363,6 +363,7 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
 		        (font-latex-math-face (,@fmt-none ,@fg-base1)) ; Type
 		        (font-latex-sedate-face (,@fmt-none ,@fg-yellow)) ; Type
                 (font-latex-italic-face (,@fmt-none ,@fg-green))
+                (font-latex-string-face (,@fmt-none ,@fg-cyan))
                 ;; info
                 (info-xref (:inherit link))
                 (info-xref-visited (:inherit link-visited))
