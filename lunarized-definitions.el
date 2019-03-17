@@ -256,6 +256,10 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                  (,@fg-base01 ,@bg-base3 :box nil))
                 (mode-line-inactive     ; StatusLineNC
                  (,@fg-base01 ,@bg-base2 :box nil))
+                (mode-line-indicator ; StatusLineNC
+                 (,@fg-red ,@bg-base3 :box nil))
+                (mode-line-inactive-indicator     ; StatusLineNC
+                 (,@fg-base01 ,@bg-base2 :box nil))
                 (region (,@fg-base01 ,@bg-base03 ,@fmt-revbb)) ; Visual
                 (secondary-selection (,@bg-base02))
                 (shadow (,@fg-base01))
