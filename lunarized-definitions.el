@@ -242,7 +242,7 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (warning (,@fmt-bold ,@fg-magenta)) ; WarningMsg
                 (success (,@fg-blue))               ; MoreMsg
                 (escape-glyph-face (,@fg-red))
-                (fringe (,@fg-base01 ,@bg-base02))
+                (fringe (,@fg-base00 ,@bg-back))
                 (linum (,@fg-base01 ,@bg-base03))
                 (header-line (,@fg-base0 ,@bg-base02 ,@fmt-revbb)) ; Pmenu
                 (highlight (,@bg-base02))
