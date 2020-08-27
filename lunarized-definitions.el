@@ -371,6 +371,8 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
 		        (font-latex-sedate-face (,@fmt-none ,@fg-yellow)) ; Type
                 (font-latex-italic-face (,@fmt-none ,@fg-green))
                 (font-latex-string-face (,@fmt-none ,@fg-cyan))
+                (font-latex-verbatim-face (,@fmt-none ,@fg-orange))
+                (font-latex-special-comment-face (,@fmt-none ,@fg-violet))
                 ;; info
                 (info-xref (:inherit link))
                 (info-xref-visited (:inherit link-visited))
