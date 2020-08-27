@@ -270,6 +270,9 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 ;; compilation
                 (compilation-info (,@fmt-bold ,@fg-green))
                 (compilation-warning (,@fmt-bold ,@fg-orange))
+                (compilation-mode-line-run ( ,@fg-orange))
+                (compilation-mode-line-exit ( ,@fg-green))
+                (compilation-mode-line-fail (,@fmt-revr ,@fg-magenta))
                 ;; custom
                 (custom-button
                  (,@fg-base1 ,@bg-base02 :box (:line-width 2 :style released-button)))
