@@ -373,6 +373,13 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (font-latex-string-face (,@fmt-none ,@fg-cyan))
                 (font-latex-verbatim-face (,@fmt-none ,@fg-orange))
                 (font-latex-special-comment-face (,@fmt-none ,@fg-violet))
+                ;; avy
+                (avy-lead-face (,@fmt-none ,@fg-red))
+                (avy-lead-face-0 (,@fmt-none ,@fg-blue))
+                (avy-lead-face-1 (,@fmt-none ,@fg-green))
+                (avy-lead-face-1 (,@fmt-none ,@fg-yellow))
+                (avy-background (,@fmt-none ,@fg-base01))
+
                 ;; info
                 (info-xref (:inherit link))
                 (info-xref-visited (:inherit link-visited))
