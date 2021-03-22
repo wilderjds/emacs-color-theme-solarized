@@ -442,6 +442,16 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (org-agenda-restriction-lock (,@fmt-revr ,@fg-base03 ,@bg-cyan))
                 (org-time-grid (,@fg-yellow))
                 (org-latex-and-related(,@fg-orange))
+
+                (org-habit-clear-face (,@fg-blue ))
+                (org-habit-clear-future-face (,@fg-blue ))
+                (org-habit-ready-face (,@fg-green ))
+                (org-habit-ready-future-face (,@fg-green ))
+                (org-habit-alert-face (,@fg-yellow ))
+                (org-habit-alert-future-face (,@fg-yellow ))
+                (org-habit-overdue-face (,@fg-magenta ))
+                (org-habit-overdue-future-face (,@fg-magenta ))
+
                 ;; table
                 (table-cell (,@fmt-none ,@fg-base0 ,@bg-back))
                 ;; outline - pandocBlockQuoteLeader[1–6]
@@ -810,6 +820,7 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
 		        (visible-mark-active (,@fg-base03 ,@bg-yellow))
                 ;; haskell
                 (haskell-keyword-face (,@fg-cyan)))))))
+
 
 ;;;###autoload
 (when (boundp 'custom-theme-load-path)
