@@ -562,8 +562,8 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (gnus-emphasis-highlight-words ; highlight
                  (,@fmt-none ,fg-yellow))
                 (gnus-header-content (,@fmt-none ,@fg-base01)) ; hdrdefault
-                (gnus-header-from (,@fmt-none ,@fg-base00)) ; header ^From
-                (gnus-header-name (,@fmt-none ,@fg-base01)) ; hdrdefault
+                (gnus-header-from (,@fmt-none ,@fg-green)) ; header ^From
+                (gnus-header-name (,@fmt-none ,@fg-yellow)) ; hdrdefault
                 (gnus-header-newsgroups (,@fmt-none ,@fg-base02)) ; hdrdefault
                 (gnus-header-subject (,@fmt-none ,@fg-blue)) ; header ^Subject
                 (gnus-server-agent (,@fmt-bold ,@fg-base3))
