@@ -656,11 +656,13 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (helm-selection (:inherit region))
                 (helm-selection-line (:inherit secondary-selection))
                 (helm-separator (,@fg-red))
-                (helm-source-header (:inherit helm-header))
+                (helm-source-header (,@fg-blue))
                 (helm-time-zone-current (,@fg-green))
                 (helm-time-zone-home (,@fg-red))
                 (helm-visible-mark (,@fmt-bold ,@bg-back ,@fg-magenta))
                 (helm-w3m-bookmarks (:inherit helm-bookmark-w3m))
+                ;; help
+                (help-key-binding (,@fg-orange ,@bg-base02))
                 ;; markdown
                 (markdown-bold-face (:inherit bold))
                 (markdown-header-delimiter-face (:inherit shadow))
