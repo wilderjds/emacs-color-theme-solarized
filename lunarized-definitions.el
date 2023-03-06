@@ -383,6 +383,7 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 ;; info
                 (info-xref (:inherit link))
                 (info-xref-visited (:inherit link-visited))
+                (info-menu-header (:inherit outline-1))
                 ;; org
                 (org-block-background (,@bg-base02))
                 (org-hide (,@fg-base03))
