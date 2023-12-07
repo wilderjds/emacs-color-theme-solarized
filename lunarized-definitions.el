@@ -341,6 +341,11 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (eshell-ls-symlink (,@fg-cyan))
                 (eshell-ls-unreadable (,@fg-base00))
                 (eshell-prompt (,@fmt-bold ,@fg-green))
+                ;; elfeed
+                (elfeed-search-date-face (,@fg-violet))
+                (elfeed-search-title-face (,@fg-base0))
+                (elfeed-search-feed-face (,@fg-yellow))
+                (elfeed-search-tag-face (,@fg-green))
                 ;; font-lock
                 (font-lock-builtin-face (,@fmt-none ,@fg-green)) ; Statement
                 (font-lock-comment-face (,@fmt-ital ,@fg-base01)) ; Comment
