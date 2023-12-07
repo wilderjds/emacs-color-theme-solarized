@@ -424,7 +424,7 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (org-date (,@fmt-undr ,@fg-violet))
                 (org-date-selected (,@fmt-revr ,@fg-red))
                 (org-sexp-date (,@fmt-undr ,@fg-violet))
-                (org-tag (,@fmt-bold))
+                (org-tag (,@fg-yellow))
                 (org-list-dt (,@fmt-bold))
                 (org-agenda-done (,@fg-green))
                 (org-headline-done (,@fg-base01))
