@@ -657,6 +657,8 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (helm-ls-git-modified-not-staged-face (,@fmt-ital ,@fg-base01))
                 (helm-ls-git-renamed-modified-face (,@fg-green))
                 (helm-ls-git-untracked-face (,@fg-red))
+                (helm-mu-contacts-name-face (,@fg-yellow))
+                (helm-mu-contacts-address-face (:inherit default))
                 (helm-M-x-key (,@fmt-none ,@fg-orange))
                 (helm-match (:inherit match))
                 (helm-moccur-buffer (,@fmt-undr ,@fg-cyan))
