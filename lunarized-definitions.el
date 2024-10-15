@@ -434,6 +434,7 @@ the \"Gen RGB\" column in lunarized-definitions.el to improve them further."
                 (org-formula (:weight bold :slant italic ,@fg-red))
                 (org-code (,@fg-base01))
                 (org-document-title (,@fmt-bold ,@fg-cyan))
+                (org-roam-title (,@fg-cyan))
                 (org-document-info-keyword (,@fg-base01))
                 (org-document-info (,@fg-green))
                 (org-block (,@fg-base01))
